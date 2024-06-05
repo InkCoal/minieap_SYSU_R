@@ -17,9 +17,9 @@ PLUGIN_MODULES += if_impl_sockraw
 # PLUGIN_MODULES += ifaddrs
 
 ENABLE_DEBUG  := false
-ENABLE_ICONV  := true
-ENABLE_GBCONV := false
-STATIC_BUILD  := false
+ENABLE_ICONV  := false
+ENABLE_GBCONV := true
+STATIC_BUILD  := true
 
 # If your platform has iconv_* integrated into libc, change to false
 # Affects dynamic linking
@@ -28,7 +28,7 @@ LIBICONV_STANDALONE := false
 CUSTOM_CFLAGS :=
 CUSTOM_LDFLAGS :=
 CUSTOM_LIBS :=
-
+CC := mips-openwrt-linux-gcc
 # Example for cross-compiling
 # CC := arm-brcm-linux-uclibcgnueabi-gcc
 # ENABLE_ICONV := true
@@ -36,3 +36,4 @@ CUSTOM_LIBS :=
 # CUSTOM_LIBS += /home/me/arm/libiconv.a
 # PLUGIN_MODULES += ifaddrs
 # STATIC_BUILD := true
+
